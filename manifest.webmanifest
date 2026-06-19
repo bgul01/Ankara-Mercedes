@@ -1,0 +1,25 @@
+{
+  "name": "Ercan Mehdi Mercedes Özel Servis",
+  "short_name": "Ercan Mehdi",
+  "description": "Ankara Şaşmaz'da Mercedes araçlar için Star Diagnosis, motor, mekanik, elektrik-elektronik ve periyodik bakım hizmetleri.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#07111f",
+  "lang": "tr",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
