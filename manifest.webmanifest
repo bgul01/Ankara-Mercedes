@@ -2,7 +2,8 @@
   "name": "Ankara Mercedes – Ercan Mehdi",
   "short_name": "Ankara Mercedes",
   "description": "Ankara Mercedes – Şaşmaz Oto Sanayi'nde Xentry, motor, elektrik-elektronik ve periyodik bakım. 15 yıllık deneyim.",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f6f8fb",
   "theme_color": "#07111f",
@@ -10,16 +11,22 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/assets/icons/icon-192.png",
+      "src": "./assets/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-512.png",
+      "src": "./assets/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

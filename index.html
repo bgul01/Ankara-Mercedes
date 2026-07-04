@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Ankara Mercedes | Ercan Mehdi – Şaşmaz Özel Servis</title>
   <meta name="description" content="Ankara Mercedes – Ercan Mehdi özel servis. Şaşmaz Oto Sanayi'nde Xentry, motor, elektrik-elektronik ve periyodik bakım. 15 yıllık deneyim, uzman kadro.">
   <meta name="keywords" content="Ankara Mercedes, Ankara Mercedes Servisi, Ankara Mercedes Ercan Mehdi, Ankara Mercedes Özel Servis, Mercedes Servisi Ankara, Şaşmaz Mercedes Servisi, Mercedes Xentry Ankara, Etimesgut Mercedes Servis">
@@ -16,9 +18,10 @@
   <meta property="og:url" content="https://ankaramercedes.com.tr/">
   <meta property="og:title" content="Ankara Mercedes | Ercan Mehdi – Şaşmaz Özel Servis">
   <meta property="og:description" content="Ankara Mercedes – Ercan Mehdi özel servis. Şaşmaz Oto Sanayi'nde Xentry, motor, elektrik-elektronik ve periyodik bakım. 15 yıllık deneyim.">
-  <meta property="og:image" content="https://ankaramercedes.com.tr/assets/images/hero/ankara-mercedes-banner.webp">
+  <meta property="og:image" content="https://ankaramercedes.com.tr/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ankara Mercedes – Ercan Mehdi Özel Servis, Şaşmaz Etimesgut">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:site_name" content="Ankara Mercedes">
 
@@ -26,7 +29,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ankara Mercedes | Ercan Mehdi – Şaşmaz Özel Servis">
   <meta name="twitter:description" content="Ankara Mercedes – Ercan Mehdi özel servis. Şaşmaz'da Xentry, motor, elektrik-elektronik ve periyodik bakım.">
-  <meta name="twitter:image" content="https://ankaramercedes.com.tr/assets/images/hero/ankara-mercedes-banner.webp">
+  <meta name="twitter:image" content="https://ankaramercedes.com.tr/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Ankara Mercedes – Ercan Mehdi Özel Servis, Şaşmaz Etimesgut">
 
   <!-- PWA -->
   <link rel="manifest" href="./manifest.webmanifest">
@@ -34,9 +38,8 @@
   <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="./css/style.css">
 
@@ -53,7 +56,7 @@
         "url": "https://ankaramercedes.com.tr",
         "telephone": "+905462808597",
         "email": "info@ercanmehdiservis.com",
-        "image": "https://ankaramercedes.com.tr/assets/images/hero/ankara-mercedes-banner.webp",
+        "image": "https://ankaramercedes.com.tr/assets/images/og-image.jpg",
         "priceRange": "$$",
         "currenciesAccepted": "TRY",
         "paymentAccepted": "Cash, Credit Card",
@@ -87,14 +90,7 @@
         "knowsAbout": "Mercedes-Benz",
         "brand": {"@type": "Brand", "name": "Mercedes-Benz"},
         "foundingDate": "2009",
-        "numberOfEmployees": {"@type": "QuantitativeValue", "value": "10"},
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "1000",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        "numberOfEmployees": {"@type": "QuantitativeValue", "value": "10"}
       },
       {
         "@type": "Service",
@@ -149,6 +145,8 @@
   </script>
 </head>
 <body>
+
+  <a href="#anasayfa" class="skip-link">İçeriğe atla</a>
 
   <!-- ===================== HEADER ===================== -->
   <header class="header" id="header">
@@ -436,7 +434,7 @@
             </article>
 
           </div>
-          <div class="services__dots" id="servicesDots" role="tablist" aria-label="Hizmet sayfaları"></div>
+          <div class="services__dots" id="servicesDots" role="group" aria-label="Hizmet sayfaları"></div>
         </div>
       </div>
     </section>
@@ -567,7 +565,7 @@
             </article>
 
           </div>
-          <div class="models__dots" id="modelsDots" role="tablist" aria-label="Model seçimi"></div>
+          <div class="models__dots" id="modelsDots" role="group" aria-label="Model seçimi"></div>
         </div>
 
         <!-- CTA Band -->
@@ -784,6 +782,55 @@
       </div>
     </section>
 
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq" id="sss" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <p class="section-eyebrow">SIKÇA SORULAN SORULAR</p>
+            <h2 class="section-title" id="faq-title">Merak Edilenler</h2>
+          </div>
+        </div>
+        <div class="faq__list" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Ankara'da Mercedes özel servis nerede?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__answer">Ankara Mercedes – Ercan Mehdi, Ankara Şaşmaz Oto Sanayi Sitesi, Etimesgut'ta hizmet vermektedir. Adres: Şaşmaz Oto Sanayi Sitesi, Etimesgut / Ankara.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Mercedes Xentry Ankara'da nerede yapılır?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__answer">Ankara Mercedes'te orijinal Mercedes Xentry cihazıyla arıza tespiti ve ECU kodlama işlemleri yapılmaktadır.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Hangi Mercedes modelleri için hizmet veriyorsunuz?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__answer">C Serisi (W204/W205/W206), E Serisi (W212/W213/W214), S Serisi (W221/W222/W223), CLA Serisi (C117/C118), GLC Serisi (X253/X254) ve G Serisi (W463/W464) dahil tüm Mercedes-Benz modelleri için servis hizmeti veriyoruz.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Mercedes periyodik bakım Ankara'da nerede yaptırılır?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__answer">Ankara Mercedes'te Mercedes periyodik bakım, yağ değişimi, filtre bakımı ve tüm rutin servis işlemleri yapılmaktadır. Randevu için <a href="tel:+905462808597">0546 280 85 97</a>.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">
+              Servisiniz hafta sonu açık mı?
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__answer">Evet, Pazartesi'den Cumartesi'ye 08:30-19:00 saatleri arasında hizmet veriyoruz.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===================== FOOTER ===================== -->
@@ -799,11 +846,12 @@
           </a>
           <p class="footer__desc">Ankara Mercedes olarak araçlarınıza profesyonel çözümler sunuyoruz. Deneyim, teknoloji ve güven bir arada.</p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Facebook sayfamız" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <!-- TODO: Facebook/Instagram hesapları açıldığında gerçek adreslerle buraya eklenecek -->
+            <a href="tel:+905462808597" class="footer__social-link" aria-label="Bizi arayın: 0546 280 85 97">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.27-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </a>
-            <a href="#" class="footer__social-link" aria-label="Instagram sayfamız" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="mailto:info@ercanmehdiservis.com" class="footer__social-link" aria-label="E-posta gönderin">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
             <a href="https://wa.me/905462808597" class="footer__social-link" aria-label="WhatsApp hattımız" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.524 5.84L.057 23.998l6.305-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.656-.518-5.176-1.42l-.371-.22-3.742.981.999-3.648-.242-.375A9.972 9.972 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>

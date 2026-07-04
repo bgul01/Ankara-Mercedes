@@ -296,7 +296,14 @@
     if (!target) return;
 
     e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+
+    // Klavye kullanıcıları için odağı hedef bölüme taşı (skip-link vb.)
+    if (!target.hasAttribute('tabindex')) {
+      target.setAttribute('tabindex', '-1');
+    }
+    target.focus({ preventScroll: true });
   });
 
   /* ==================== GALLERY LAZY ENHANCE ==================== */
