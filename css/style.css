@@ -1059,32 +1059,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .about__card:hover .about__visual img { transform: scale(1.025); }
 
-.about__visual-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  z-index: 2;
-  padding: 9px 13px;
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 100px;
-  background: rgba(7,17,31,0.54);
-  backdrop-filter: blur(12px);
-  color: rgba(255,255,255,0.9);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-.about__visual-badge span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #60a5fa;
-  box-shadow: 0 0 0 4px rgba(96,165,250,0.16);
-}
-
 .about__visual-caption {
   display: flex;
   flex-direction: column;
@@ -1617,7 +1591,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .about__actions { flex-direction: column; }
   .about__btn { width: 100%; }
   .about__visual { min-height: 260px; }
-  .about__visual-badge { top: 18px; left: 18px; }
   .about__visual-caption { right: 18px; bottom: 18px; left: 18px; }
 
   .gallery__grid { grid-template-columns: 1fr; }
