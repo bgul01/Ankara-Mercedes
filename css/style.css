@@ -518,13 +518,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   grid-auto-columns: 280px;
   gap: 20px;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
-  overscroll-behavior-y: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
   touch-action: pan-x pan-y pinch-zoom;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 10px;
 }
 .services__track::-webkit-scrollbar { display: none; }
 
