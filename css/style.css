@@ -1154,10 +1154,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-shrink: 0;
 }
 
+.review-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
 .review-card__name {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+.review-card__date {
+  font-size: 0.72rem;
+  color: var(--color-muted);
 }
 
 /* ==================== GALLERY ==================== */
