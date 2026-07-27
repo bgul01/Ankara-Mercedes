@@ -188,6 +188,12 @@
         clone.removeAttribute('data-reveal');
         clone.setAttribute('data-carousel-clone', 'true');
         clone.setAttribute('aria-hidden', 'true');
+        // aria-hidden bir öğe odaklanabilir kalmamalı: klonu ve içindeki
+        // tüm bağlantı/düğmeleri klavye sırasının dışına al.
+        if (typeof clone.tabIndex === 'number') clone.tabIndex = -1;
+        clone.querySelectorAll('a[href], button, [tabindex]').forEach(function (el) {
+          el.tabIndex = -1;
+        });
         sliderTrack.appendChild(clone);
       }
     }
