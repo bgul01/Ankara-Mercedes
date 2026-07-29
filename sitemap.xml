@@ -12,15 +12,31 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/"/>
   </url>
 
   <url>
+    <loc>https://ankaramercedes.com.tr/iletisim/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/iletisim/"/>
+  </url>
+
+  <url>
+    <loc>https://ankaramercedes.com.tr/hakkimizda/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hakkimizda/"/>
+  </url>
+
+  <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-xentry-ariza-tespiti-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-xentry-ariza-tespiti-ankara/"/>
@@ -28,7 +44,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-motor-revizyon-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-motor-revizyon-ankara/"/>
@@ -36,7 +52,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-sanziman-servisi-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-sanziman-servisi-ankara/"/>
@@ -44,7 +60,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-elektrik-elektronik-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-elektrik-elektronik-ankara/"/>
@@ -52,7 +68,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-periyodik-bakim-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-periyodik-bakim-ankara/"/>
@@ -60,7 +76,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-klima-servisi-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-klima-servisi-ankara/"/>
@@ -68,7 +84,7 @@
 
   <url>
     <loc>https://ankaramercedes.com.tr/hizmetler/mercedes-kaporta-boya-ankara/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://ankaramercedes.com.tr/hizmetler/mercedes-kaporta-boya-ankara/"/>
