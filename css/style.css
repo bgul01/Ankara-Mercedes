@@ -1239,31 +1239,26 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ==================== GALLERY ==================== */
 .gallery { padding: 80px 0; }
 
+/* Masonry: fotoğraflar dikey/yatay karışık, kırpmadan kendi oranıyla dursun */
 .gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 16px;
+  columns: 3;
+  column-gap: 16px;
 }
 
 .gallery__item {
-  margin: 0;
+  position: relative;
+  margin: 0 0 16px;
+  break-inside: avoid;
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 4/3;
   background: linear-gradient(135deg, #1a2540 0%, #0d1a30 100%);
-}
-.gallery__item--wide {
-  grid-column: span 2;
-  aspect-ratio: 2/1;
 }
 
 .gallery__item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.45s ease;
+  height: auto;
   display: block;
+  transition: transform 0.45s ease;
 }
 .gallery__item:hover img { transform: scale(1.06); }
 
@@ -1586,8 +1581,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
   .reviews__grid { grid-template-columns: repeat(2, 1fr); }
 
-  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery__item--wide { grid-column: span 2; }
+  .gallery__grid { columns: 2; }
 
   .footer__grid { grid-template-columns: 1fr; gap: 40px; }
   .footer__desc { max-width: none; }
@@ -1620,8 +1614,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
   .reviews__grid { grid-template-columns: 1fr; }
 
-  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery__item--wide { grid-column: span 2; }
+  .gallery__grid { columns: 2; column-gap: 12px; }
+  .gallery__item { margin-bottom: 12px; }
 
   .stats__card { border-radius: var(--radius-lg); }
   .stats__item { gap: 12px; }
@@ -1671,9 +1665,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .about__visual { min-height: 260px; }
   .about__visual-caption { right: 18px; bottom: 18px; left: 18px; }
 
-  .gallery__grid { grid-template-columns: 1fr; }
-  .gallery__item--wide { grid-column: span 1; }
-  .gallery__item { aspect-ratio: 4/3; }
+  .gallery__grid { columns: 1; }
 
   .footer__btns { flex-direction: column; }
   .footer__btns .btn { width: 100%; justify-content: center; }
