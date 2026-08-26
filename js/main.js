@@ -312,6 +312,32 @@
     target.focus({ preventScroll: true });
   });
 
+  /* ==================== GALLERY GÖSTER / GİZLE ==================== */
+  const galleryWrap = document.getElementById('galeri-wrap');
+  const galleryMore = document.getElementById('galeri-more');
+
+  if (galleryWrap && galleryMore) {
+    const galleryMoreText = galleryMore.querySelector('.gallery__more-text');
+
+    galleryMore.addEventListener('click', function () {
+      const collapsed = galleryWrap.classList.toggle('is-collapsed');
+      galleryMore.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+
+      if (galleryMoreText) {
+        galleryMoreText.textContent = collapsed ? 'Diğerlerini Gör' : 'Daha Az Göster';
+      }
+
+      // Kapatırken galeri başlığına geri dön, kullanıcı boşlukta kalmasın
+      if (collapsed) {
+        const section = document.getElementById('galeri');
+        if (section) {
+          const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          section.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+        }
+      }
+    });
+  }
+
   /* ==================== GALLERY LAZY ENHANCE ==================== */
   // Tüm galeri imglerinde loading=lazy zaten var; burada ek bir şey gerekmez.
   // img elementleri doğrudan HTML'de tanımlanmış, JS ile DOM yazmıyoruz.
