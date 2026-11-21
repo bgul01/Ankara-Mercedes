@@ -2084,3 +2084,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .ct-grid { grid-template-columns: 1fr; }
   .ct-map { height: 320px; }
 }
+
+/* ==================== CSP: inline stillerden taşınan yardımcı class'lar ==================== */
+/* Dosya sonunda yer alır; aynı özgüllükteki .svc-hero / .container / .svc-block / .svc-cta kurallarını kaynak sırasıyla ezer. */
+.pt-header-40 { padding-top: calc(var(--header-h) + 40px); }
+.pb-section { padding-bottom: clamp(48px, 6vw, 80px); }
+.mt-26 { margin-top: 26px; }
